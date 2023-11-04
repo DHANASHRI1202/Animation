@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style type="text/css">
+        .blink
+        {
+            animation-name: chng;
+            animation-duration: 1s;
+            opacity: 0;
+            z-index: 3;
+        }
+        @keyframes chng
+        {
+            100%{color: red;opacity: 1;}
+        }
+        h1, img
+        {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+        h1 
+        {
+            color: white ;
+            position: absolute;
+            top: 40%;
+            left: 22%;
+        }
+    </style>
+</head>
+<body>
+    <div style=height:500px; width: 500px; position: relative; top: 0px; left: 0px;>
+        <img src="https://cdn-icons-png.flaticon.com/512/59/59170.png" height="500px" width="500px">
+        <h1 align="center" style="font-size: 50px" onclick="blink()" id="heart">&#x2764;</h1>
+    </div>
+    <script type="text/javascript">
+        let hrt = document.getElementById('heart');
+        function blink(){
+                hrt.setAttribute('class','blink');
+        }
+    </script>
+</body>
+</html>
